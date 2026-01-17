@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>friends with daniel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Space Grotesk', sans-serif;
+      background: #f4f4f4;
+      color: #111;
+      overflow-x: hidden;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
+      background: white;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+
+    .sidebar a {
+      display: block;
+      margin: 0.5rem 0;
+      text-decoration: none;
+      color: #111;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover {
+      color: #ff5500;
+    }
+
+    .logo {
+      font-size: 2rem;
+      padding: 2rem;
+    }
+
+    .description {
+      font-size: 1rem;
+      padding: 0 2rem;
+      max-width: 600px;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* === AVATAR ANIMATION === */
+    .avatar-container {
+      position: fixed;
+      bottom: -250px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 200px;
+      z-index: 998;
+      animation: popup 6s ease-in-out forwards;
+    }
+
+    .avatar-container img {
+      width: 100%;
+      animation: look-around 6s ease-in-out;
+    }
+
+    @keyframes popup {
+      0% { bottom: -250px; }
+      10% { bottom: 0px; }
+      85% { bottom: 0px; }
+      100% { bottom: -250px; }
+    }
+
+    @keyframes look-around {
+      0%, 20% { transform: translateX(0); }
+      30%, 40% { transform: translateX(-5px); }
+      50%, 60% { transform: translateX(5px); }
+      70%, 100% { transform: translateX(0); }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="#writing">✍️ Writing</a>
+    <a href="#audio">📻 Audio</a>
+    <a href="#scrolls">📜 Scrolls</a>
+    <a href="#library">📚 Reading</a>
+    <a href="#about">🛰️ About</a>
+  </div>
+
+  <!-- Avatar (animated) -->
+  <div class="avatar-container">
+    <img src="your-avatar.png" alt="Pixel Avatar" />
+  </div>
+
+  <!-- Page Content -->
+  <div class="logo">friends with daniel</div>
+  <div class="description">a rotating log of what daniel & co. are working on — notes, scrolls, radio drops, & fieldwork 🌲📡</div>
+
+  <section id="writing">
+    <h2>✍️ Writing</h2>
+    <p>Latest drop: <a href="https://nikosekoya.substack.com" target="_blank">View on Substack</a></p>
+  </section>
+
+  <section id="audio">
+    <h2>📻 Audio</h2>
+    <audio controls>
+      <source src="your-audio.mp3" type="audio/mpeg">
+      Your browser does not support audio playback.
+    </audio>
+  </section>
+
+  <section id="scrolls">
+    <h2>📜 Animated Scroll</h2>
+    <p>Embed coming soon...</p>
+  </section>
+
+  <section id="library">
+    <h2>📚 Reading</h2>
+    <ul>
+      <li><a href="#">A Testament of Devotion – Thomas Kelly</a></li>
+      <li><a href="#">James: Electric Bones Series</a></li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>🛰️ About</h2>
+    <p>This is a quiet channel for friends. You found the trailhead. You’re invited.</p>
+  </section>
+
+</body>
+</html>
